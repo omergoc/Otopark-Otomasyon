@@ -22,7 +22,7 @@ namespace Otopark_Otomasyon
         public void hizmet_guncelle(string musteri, string arac, string baslangic, string bitis, int ucret, string abonelik,int id)
         {
             kmt.Connection = bag.baglan();
-            kmt.CommandText = "UPDATE hizmetler SET hizmet_musteri='" + musteri + "' , hizmet_arac='" + arac + "', hizmet_baslangic='" + baslangic + "' , hizmet_bitis='" + bitis + "' , hizmet_ucret='" + ucret + "' , hizmet_abonelik='" + abonelik + "' where abone_id='" + id + "'";
+            kmt.CommandText = "UPDATE hizmetler SET hizmet_musteri='" + musteri + "' , hizmet_arac='" + arac + "', hizmet_baslangic='" + baslangic + "' , hizmet_bitis='" + bitis + "' , hizmet_ucret='" + ucret + "' , hizmet_abonelik='" + abonelik + "' where hizmet_id='" + id + "'";
             kmt.ExecuteNonQuery();
             kmt.Dispose();
         }
